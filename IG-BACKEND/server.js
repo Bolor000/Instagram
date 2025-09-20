@@ -85,7 +85,7 @@ app.post("/sign-up", async (req, res) => {
     email: email,
     password: hashedPassword,
   });
-
+  
   res.status(201).json({
     message: "Signed up successfully",
     user: {
@@ -95,6 +95,8 @@ app.post("/sign-up", async (req, res) => {
     },
   });
 });
+
+app.post("/create", async (req, res) => {});
 
 app.get("/posts:userID", async (req, res) => {
   const params = req.params;
@@ -107,3 +109,5 @@ app.get("/posts:userID", async (req, res) => {
 app.listen(port, () => {
   console.log(`http://localhost:${port}`);
 });
+
+
